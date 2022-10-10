@@ -1,18 +1,45 @@
-package javaapplication1;
+package code;
 
-import java.util.*;
+import java.util.Scanner;
+
 public class ThreeLetterAcronym {
-    public static void main(String[] args) {
-        // Write your code here
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-    System.out.println("Enter three words:");
-    String[] str = new String[3];
-    String m=""; 
-    for(int i=0;i<3;i++)
-    {
-    str[i]=myObj.nextLine();
-    m=m + String.valueOf(str[i].charAt(0)).toUpperCase();
+    public static void main(String args[]) {
+        String str = "", ans = "";
+        String arr[] = new String[3];
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a three letter Abbreviation");
+        str = scan.nextLine();
+        arr = str.split(" ");
+        if (arr.length != 3) {
+            System.out.println("Enter a valid Abbreviation" + arr.length);
+
+            return;
+        }
+        for (int i = 0; i < 3; i++) {
+            ans += arr[i].charAt(0);
+        }
+        System.out.println(ans.toUpperCase());
     }
-    System.out.println(" Three letter Acronym is: " + m);
-}
+}package code;
+
+import java.util.Scanner;
+
+public class ThreeLetterAcronym {
+    public static void main(String args[]) {
+        String str = "", ans = "";
+        String arr[] = new String[3];
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a three letter Abbreviation");
+        str = scan.nextLine();
+        arr = str.split(" ");
+        if (arr.length != 3) {
+            System.out.println("Enter a valid Abbreviation" + arr.length);
+
+            return;
+        }
+        for (int i = 0; i < 3; i++) {
+            ans += arr[i].charAt(0);
+        }
+        System.out.println(ans.toUpperCase());
+    }
 }
